@@ -43,11 +43,6 @@
   
 }
 
-#navbartop .logo{
-height: 80px;
-transition: .5s;
-
-}
 
 #navbartop ul{
   float: right;
@@ -56,4 +51,36 @@ transition: .5s;
   display: flex;
 }
 
-#navbartop ul li
+#navbartop ul li{
+  list-style: none;
+}
+
+#navbartop ul li a{
+  list-style: 80px;
+  color: #252525;
+  padding: 5px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: .5s;
+}
+
+#navbartop ul li a.active, ul:hover li a:hover{
+  color: #fff;
+  background: green;
+}
+
+#header1{
+  width: 100%;
+  height: 64vh;
+  background: url(placeholder-300x300.png);
+  background-size: cover;
+}
+
+nav.black{
+  background: rgba(58, 46, 46, 0.966);
+  height: 100px;
+  padding: 10px 50px;
+  color: white;
+}
+
+
