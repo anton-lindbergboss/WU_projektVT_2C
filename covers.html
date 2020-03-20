@@ -7,38 +7,89 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>COCO - The Collective</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="css/hamburgers.css">
 
 </head>
 <body>
+    <header>
+        <a href="index.html" class="logo">Logo</a>
+        <ul class="navunorderedtop">
+            <li class="navlisttop"><a class="navatop" href="art.html">Art</a></li>
+            <li class="navlisttop"><a class="navatop"href="covers.html">Covers</a></li>
+            <li class="navlisttop"><a class="navatop"href="templates.html">Templates</a></li>
+            <li class="navlisttop"><a class="navatop"href="about.html">About</a></li>
+            <li class="navlisttop"><a class="navatop"href="purchase.html">Purchase</a></li>
+            <li class="navlisttop"><a class="navatop"href="contact.html">Contact</a></li>
+        </ul>
+    
+            <nav class="hamburger hamburger--slider" type="button">
+                <ul class="navLinks" class="hamburger">
+                        <li>
+                            <a href="contact.html">Contact</a>
+                        </li>
+                        <li>
+                            <a href="purchase.html">Purchase</a>
+                        </li>
+                        <li>
+                            <a href="about.html">About</a>
+                        </li>
+                        <li>
+                            <a href="art.html">Art</a>
+                        </li>
+                        <li>
+                            <a href="covers.html">Covers</a>
+                        </li>
+                        <li>
+                            <a href="templates.html">Templates</a>
+                        </li>
+                    </ul>
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </nav>
+        <script type="text/javascript">
+                        var hamburger = document.querySelector(".hamburger");
+                        hamburger.addEventListener("click", function() {
+                          hamburger.classList.toggle("is-active");
+                        });
+        </script>
+    </header>
+
+    <script type="text/javascript">
+        window.addEventListener("scroll", function(){
+          var header = document.querySelector("header");
+          header.classList.toggle("sticky", window.scrollY > 0);
+        })
+    </script>
+
+
     <nav class="navbarbottom">
-                <a href="index.html" >[Home]</a> <!--Change to an image--> 
                 <a href="art.html">[Art]</a> <!--Change to an image-->
-                <a href="covers.html" class="activebottom">[Covers]</a> <!--Change to an image-->
+                <a href="covers.html">[Covers]</a> <!--Change to an image-->
                 <a href="templates.html">[Templates]</a>
     </nav>
 
 
-    <div id="Grid" id="header1">
-        <header>
-            <img src="" alt="Bakgrundsbild">
-            <img src="" alt="Logotyp">
-            <br>
-            <h4>
-                COCO - The Collective (or some other text)
-            </h4>
-        </header>
-
-        <br>
-
-        <section>
-            <h1>COVERS</h1>
-            <h4>Lorem, ipsum dolor.</h4>
-            <img src="" alt="Covers1">
-            <img src="" alt="Covers2">
-            <img src="" alt="Covers3">
-        </section>
-    
+    <div id="Gridcovers">
+            <section id="break">
+                </section>
+                <section>
+                    <h1 class="mainlinetext">COVERS</h1>
+                    <h2>The place of storage for any type of picture which in some relation or not relates to a cover of a either real or imaginary album, song, EP, and so forth.</h2>
+                </section>
+        
+                <br>
+        
+                <section>
+                    <img src="" alt="Picture">
+                    <img src="" alt="Picture">
+                    <img src="" alt="Picture">
+                    <img src="" alt="Picture">
+                    <img src="" alt="Picture">
+                </section>
     </div>
+    
+    <script src="js/javascript.js"></script>
+    
 </body>
 </html>

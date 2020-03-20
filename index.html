@@ -7,47 +7,63 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>COCO - The Collective</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-    <script type="text/javascript">
-    $(window).on('scroll', function (){
-        if ($(window).scrollTop()){
-            $('.topchanger').addClass('black');
-        }
-        else 
-        {
-            $(".topchanger").removeClass('black');
-        }
-    })
-    </script>
+    <link rel="stylesheet" href="css/hamburgers.css">
 
 </head>
 <body>
-    <nav id="navbartop" class="topchanger">
-        <div class="logo">
-            <img src="" alt="Logotyp">
-        </div>
-
-        <ul>
-            <li>
-                <a href="#" class="active">Homer</a>
-            </li>
-            <li>
-                <a href="#">Art</a>
-            </li>
-            <li>
-                <a href="#">Covers</a>
-            </li>
-            <li>
-                <a href="#">Template</a>
-            </li>
-            <li>
-                <a href="#">Contact</a>
-            </li>
+    <header>
+        <a href="index.html" class="logo">Logo</a>
+        <ul class="navunorderedtop">
+            <li class="navlisttop"><a class="navatop" href="art.html">Art</a></li>
+            <li class="navlisttop"><a class="navatop"href="covers.html">Covers</a></li>
+            <li class="navlisttop"><a class="navatop"href="templates.html">Templates</a></li>
+            <li class="navlisttop"><a class="navatop"href="about.html">About</a></li>
+            <li class="navlisttop"><a class="navatop"href="purchase.html">Purchase</a></li>
+            <li class="navlisttop"><a class="navatop"href="contact.html">Contact</a></li>
         </ul>
-    </nav>
+    
+            <nav class="hamburger hamburger--slider" type="button">
+                <ul class="navLinks" id="navlinkswidth" class="hamburger">
+                        <li>
+                            <a href="contact.html">Contact</a>
+                        </li>
+                        <li>
+                            <a href="purchase.html">Purchase</a>
+                        </li>
+                        <li>
+                            <a href="about.html">About</a>
+                        </li>
+                        <li>
+                            <a href="art.html">Art</a>
+                        </li>
+                        <li>
+                            <a href="covers.html">Covers</a>
+                        </li>
+                        <li>
+                            <a href="templates.html">Templates</a>
+                        </li>
+                    </ul>
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </nav>
+        <script type="text/javascript">
+                        var hamburger = document.querySelector(".hamburger");
+                        hamburger.addEventListener("click", function() {
+                          hamburger.classList.toggle("is-active");
+                        });
+        </script>
+    </header>
+
+    <script type="text/javascript">
+        window.addEventListener("scroll", function(){
+          var header = document.querySelector("header");
+          header.classList.toggle("sticky", window.scrollY > 0);
+        })
+    </script>
+
 
     <nav class="navbarbottom">
-                <a href="index.html" class="activebottom">[Home]</a> <!--Change to an image--> 
                 <a href="art.html">[Art]</a> <!--Change to an image-->
                 <a href="covers.html">[Covers]</a> <!--Change to an image-->
                 <a href="templates.html">[Templates]</a>
@@ -55,20 +71,19 @@
 
 
     <div id="Grid">
-        <header id="header1">
-            <img src="" alt="Bakgrundsbild">
-            <img src="" alt="Logotyp">
+        <section id="section1">
             <br>
-            <h4>
+            <h4 id="headertext">
                 COCO - The Collective (or some other text)
             </h4>
-        </header>
+            <img id="topbanner" src="img/placeholder-300x300.png" alt="Bakgrundsbild">
+        <section>
 
         <br>
 
-        <section class="section">
+        <section id="section2">
 
-            <h1> WHO ARE WE?</h1>
+            <h1 class="mainlinetext">WHO ARE WE?</h1>
 
             <img src="" alt="">
 
@@ -88,7 +103,7 @@
 
         </section>
 
-        <section>
+        <section id="section3">
 
             <h1>TO PAY OR NOT TO PAY?</h1>
 
@@ -100,7 +115,7 @@
             <br>
         </section>
 
-        <section>
+        <section id="section4">
             <h1>HOW TO CONTACT US</h1>
             <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste facilis, id nihil ipsum officia ad illo sit dolores, natus magnam asperiores hic nemo! Repellendus, commodi sint aliquid sit, maxime perspiciatis quasi animi dignissimos quam deserunt excepturi vel impedit obcaecati tempore deleniti asperiores iste, magnam non magni rerum consectetur laborum. Commodi ratione dolorum ex iure voluptates dolore excepturi accusamus voluptatibus, esse recusandae hic eius facere odio rerum ab accusantium? Expedita distinctio rem odio beatae recusandae, dicta maxime eius illo iure rerum enim totam aspernatur similique animi fuga odit? Vitae sunt culpa voluptatibus, fugiat, quas deleniti quo itaque possimus quisquam excepturi impedit!
@@ -113,5 +128,8 @@
         <br>
 
     </div>
+    
+    <script src="js/javascript.js"></script>
+    
 </body>
 </html>
