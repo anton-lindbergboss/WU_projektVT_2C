@@ -1,17 +1,22 @@
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Poppins', sans-serif;
+
 }
 
 body{
-
   min-height: 200vh;
 }
 
 
-.burger div {
+
+
+
+
+.burger div{
   width: 25px;
   height: 3px;
   background-color: rgb(223, 144, 70);
@@ -62,10 +67,41 @@ header{
     align-items: center;
     width: 40vh;
   }
+
+  .artcovertemp{
+    padding: 5px;
+    text-align: center;
+  }
   @media screen and (max-width: 376px) {
     #navlinkswidth{
       width: 30vh;
     }
+    header .logo img{
+      width: auto;
+      height: 10vh;
+      left: 30px;
+      
+      }
+    .navLinks{
+      width: 25vh;
+    }
+
+    .bottomnavimg{
+      height: 45px;
+      width: auto;
+    }
+
+  }
+
+  .abouth1{
+    padding: 5px;
+  }
+
+  .blackline{
+    color: #222;
+    text-align: center;
+    font-size: 4em;
+    letter-spacing: -7.5px;
   }
 
   .navLinks a{
@@ -93,6 +129,33 @@ header .logo{
   letter-spacing: 2px;
   transition: 0.5s;
 
+
+}
+
+@media screen and (min-width: 750px){
+  #lastparagraph{
+    font-size: 1.5em;
+
+  }
+  .indexparagraph{
+    font-size: 28px;
+  }
+  #indexheader1{
+    font-size: 100px;
+  }
+  #indexheader2{
+    font-size: 80px;
+  }
+
+  #indexheader3{
+    font-size: 60px;
+  }
+
+}
+
+header .logo img{
+width: auto;
+height: 10vh;
 
 }
 header ul{
@@ -144,7 +207,7 @@ header.sticky{
 #topbanner{
   position: static;
   width: 100%; /* CHANGE WHEN A REAL BACKGROUND IS CHOSEN INSTEAD OF THE PLACEHOLDER. CHANGE TO A DIRECT NUMBER OF PIXELS, WHICH CHANGES DEPENDING ON MOBILE OR NOT (MEDIAINQ.)*/
-  height: 75vh;
+  height: auto;
   background-size: cover;
 }
 
@@ -166,11 +229,15 @@ header.sticky{
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 10;
 
 }
 @media screen and (min-width: 380px) {
   .navbarbottom{
     visibility: hidden;
+  }
+  .abouth1{
+    font-size: 3em;
   }
 }
 
@@ -188,18 +255,19 @@ header.sticky{
 .navbarbottom a:hover {
   background: #f1f1f1;
   color: black;
+  overflow: hidden;
 }
 
 #Grid{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 20% 20% 20% 20% 20%;
   grid-template-areas: 
   "b1 b1 b1 b1 b1"
   "b1 b1 b1 b1 b1"
   "s1 s1 s1 s1 s1"
   "s2 s2 s2 s2 s2"
-  "s3 s3 s3 s3 s3"
+  "s3 s3 s3 s3 s3";
 }
 
 #section1{
@@ -208,7 +276,29 @@ header.sticky{
 
 #section2{
   grid-area: s1;
+  color: white;
+  background: #222;
 }
+
+
+
+
+.indexparagraph{
+padding: 10px;
+}
+
+.indexheader{
+  font-weight: 700;
+  font-size: 28px;
+  padding: 10px;
+}
+
+#section2flex{
+  color: rgb(255, 255, 255);
+  background: url(../img/placeholder-300x300.png);
+}
+
+
 
 #section3{
   grid-area: s2;
@@ -218,15 +308,797 @@ header.sticky{
   grid-area: s3;
 }
 
-.mainlinetext{
-  font-weight: 400;
-  font-size: 28px;
-  margin: 10px;
-}
-
 .break{
   height: 150px;
 }
+
+#cardbody{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #222;
+  min-height: 100vh;
+}
+
+.container{
+  position: relative;
+  width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+.container .card{
+  position: relative;
+  height: 250px;
+  background: #fff;
+  display: flex;
+  width: 45%;
+  margin: 30px 0;
+
+}
+
+.container .card .imgBx{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #333;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s ease-in-out;
+}
+
+.container #youtube:hover .imgBx{
+  width: 150px;
+  height: 150px;
+  left: -75px;
+  top: calc(50% - 75px);
+  transition: 0.5s ease-in-out;
+  background: #FF0000;
+}
+.container .card:hover .imgBx{
+  width: 150px;
+  height: 150px;
+  left: -75px;
+  top: calc(50% - 75px);
+  transition: 0.5s ease-in-out;
+}
+.container .card .imgBx:before
+{
+  content: attr(data-text);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 3em;
+  color: rgba(255, 255, 255,.05);
+  font-weight: 700;
+}
+
+.container .card .imgBx img{
+  max-width: 100px;
+  transition: 0.5s ease-in-out;
+
+}
+
+.container .card:hover .imgBx img{
+  max-width: 75px;
+  transition: 0.5s ease-in-out;
+
+}
+
+.container .card .content
+{
+  position: absolute;
+  right: 0;
+  width: calc(100% - 75px);
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.container .card .content h3{
+  margin-bottom: 5px;
+  font-size: 24px;
+}
+
+.container .card .content a{
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 10px;
+  background: #333;
+  text-decoration: none;
+  color: #fff;
+}
+
+@media (max-width: 1000px)
+{
+  .container{
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container .card{
+    width: 400px;
+  }
+}
+
+@media (max-width: 750px)
+{
+  .container .card{
+    max-width: 300px;
+    flex-direction: column;
+    height: auto;
+  }
+  .container .card .imgBx{
+    position: relative;
+  }
+  .container .card .imgBx,
+  .container .card:hover .imgBx{
+    width: 100%;
+    height: 200px;
+    left: 0px;
+  }
+  .container .card .imgBx,
+  .container #backgroundyoutube:hover .imgBx{
+    width: 100%;
+    height: 200px;
+    left: 0px;
+    background: #FF0000;
+  }
+  .container .card .imgBx img,
+  .container .card:hover .imgBx img{
+    max-width: 100px;
+  }
+  .container .card .content{
+    position: relative;
+    width: 100%;
+  }
+}
+
+.credith2{
+  padding: 10px;
+}
+
+#aboutlastparagraphback{
+  background: url(../img/placeholder-300x300.png)
+}
+
+@media (min-width: 750px){
+#headerrubrik{
+  font-size: 128px;
+  margin: 20px;
+  text-align: center;
+}
+
+.flexarticle{
+  font-size: 1.2em;
+}
+
+}
+
+.parallaximage2{
+  height: 100%;
+  width: 100%;
+}
+.abouth1{
+  grid-area: h1;
+}
+
+.flexarticle{
+  grid-area: t1;
+}
+
+
+@media (max-width: 750px){
+  #headerrubrik{
+    font-size: 80px;
+    margin: 20px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 376px){
+  #headerrubrik{
+    font-size: 50px;
+    margin: 20px;
+    text-align: center;
+  }
+}
+
+#contactunderline{
+  padding: 10px;
+  text-align: center;
+}
+
+#contactmainlinebackground{
+  background: url(../img/michael-shannon-EebW8iPgH8s-unsplash.jpg);
+  width: 100%;
+  height: auto;
+}
+
+#Credit{
+  background:#222;
+}
+
+#contactgmail{
+  background: #DC493D;
+}
+
+#backgroundyoutube{
+  background: #FF0000;
+}
+
+#backgroundinstagram{
+  background: #F14D59;
+}
+
+#backgroundtwitter{
+  background: #1DA1F3;
+}
+
+.contactback{
+  background: url(../img/k-mitch-hodge-dxoOmY-ae_w-unsplash.jpg);
+}
+
+.creditback{
+  background: url(../img/k-mitch-hodge-M7IZp1i-FQw-unsplash.jpg);
+}
+
+.creditparagraph{
+  padding: 5px;
+}
+@media screen and (min-width: 376px) {
+  #captionundercaption{
+    background: #f2f2f2;
+    padding: 5px;
+    font-size: 1.5em;
+    padding: 5px;
+  }
+#captionbody{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+}
+
+.captioncontainer{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+}
+
+#captionh3{
+  font-size: 4em;
+  text-align: center;
+  padding-bottom: 20px;
+  text-decoration: underline;
+}
+
+
+
+.captioncontainer .captionbox{
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  background: #000;
+  align-items: center;
+  justify-content: center;
+}
+
+.captioncontainer .captionbox .captionvideoBx{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;  
+  align-items: center;
+  justify-content: center;
+}
+
+.captioncontainer .captionbox .captionvideoBx img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  align-items: center;
+  justify-content: center;
+}
+
+.captioncontainer .captionbox .captioncontentBx{
+  position: absolute;
+  top: 40px;
+  bottom: 40px;
+  left:  0px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s;
+  transform-origin: left;
+  transform: scaleX(0);
+}
+
+.captioncontainer .captionbox .captioncontentBx .captioncontent{
+  position: relative;
+  padding-left: 20px;
+  opacity: 0;
+}
+.captioncontainer .captionbox:hover .captioncontentBx .captioncontent{
+  opacity: 1;
+  transition: 0.5s;
+  transition-delay: 0.5s;
+}
+
+
+
+.captioncontainer .captionbox .captioncontentBx .captioncontent h2{
+  color: #fff;
+  font-weight: 500;
+  padding-bottom: 16px;
+  font-size: 4em;
+}
+
+.captioncontainer .captionbox .captioncontentBx .captioncontent p{
+  color: #fff;
+  font-weight: 300;
+  margin-bottom: 10px;
+  font-size: 2em;
+}
+
+.captioncontainer .captionbox:hover .captioncontentBx{
+  transition: transform 0.5s;
+  transform-origin: right;
+  transform: scaleX(1);
+
+}
+#crowdfundfirstparagraph{
+  font-size: 2em;
+  padding: 5px;
+}
+}
+
+.crowdfundh2first{
+  color: lightgreen
+}
+
+.padding5px{
+  padding: 5px;
+}
+
+
+
+
+
+@media screen and (max-width: 376px) {
+  #captionbody{
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+  }
+  .text a{
+    padding: 12px;
+    border: 3px solid lightgreen;
+    color: lightgreen;
+    font-size: 2em;
+    letter-spacing: 2px;
+    position: relative;
+    top: 12px;
+    overflow: hidden;
+    transition: 0.5s;
+    display: inline-block;
+  }
+  
+  .text a:hover{
+    color: #fff
+  }
+  
+  .text a:before{
+    content: "";
+    background-color: lightgreen;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 0%;
+    z-index: -1;
+    transition: 0.5s;
+  }
+
+  #captionundercaption{
+    background: #f2f2f2;
+    padding: 5px;
+  }
+
+  #captionh3{
+    padding-top: 10px;
+    padding-left: 4px;
+    font-size: 1.5em;
+    text-align: center;
+    text-decoration: underline;
+  }
+
+
+  
+  .captioncontainer{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 375px;
+  }
+  
+  .captioncontainer .captionbox{
+    position: relative;
+    width: 100%;
+    height: 320px;
+    background: #000;
+  }
+  
+  .captioncontainer .captionbox .captionvideoBx{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .captioncontainer .captionbox .captionvideoBx img{
+    position: absolute;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .captioncontainer .captionbox .captioncontentBx{
+    position: absolute;
+    top: 40px;
+    bottom: 40px;
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.70);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s;
+    transform-origin: left;
+    transform: scaleX(0);
+  }
+  
+  .captioncontainer .captionbox .captioncontentBx .captioncontent{
+    position: relative;
+    padding-left: 20px;
+    opacity: 0;
+  }
+  .captioncontainer .captionbox .captioncontentBx .captioncontent{
+    opacity: 1;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+  }
+  
+  
+  
+  .captioncontainer .captionbox .captioncontentBx .captioncontent h2{
+    color: #fff;
+    font-weight: 500;
+    padding-bottom: 16px;
+  }
+  
+  .captioncontainer .captionbox .captioncontentBx .captioncontent p{
+    color: #fff;
+    font-weight: 300;
+    margin-bottom: 10px;
+  }
+  
+  .captioncontainer .captionbox .captioncontentBx{
+    transition: transform 0.5s;
+    transform-origin: right;
+    transform: scaleX(1);
+  
+  }
+  }
+
+  .aboutcontainer{
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 25px;
+  }
+
+
+  .aboutparallax1{
+    background: url(../img/nicolas-moscarda-eoJbO7P_1RY-unsplash.jpg) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 500px;
+    width: 100vw;
+  }
+
+  .aboutparallax2{
+    background: url(../img/aperture-vintage-SshYpuf607g-unsplash.jpg) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 500px;
+    width: 100vw;
+  }
+  .aboutparallax3{
+    background: url(../img/alexander-andrews-yOIT88xWkbg-unsplash.jpg) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 500px;
+    width: 100vw;
+  }
+  @media screen and (min-width: 750px){
+  .paddingparallax{
+    padding-top: 145px;
+  }
+
+  html{
+    scroll-behavior: smooth;
+  }
+  
+  .fundcontainer{
+    padding: 0 100px 0 100px;
+    background-color: #252627;
+    color: #fff;
+  }
+  
+  
+  .ana{
+    text-decoration: none;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    position: relative;
+    top: 50%;
+    bottom: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .main-info-section{
+    height: calc(100vh - 82px);
+  }
+  
+  .text{
+    margin-top: 128px;
+  }
+  
+  .text h1{
+    font-size: 3rem;
+    cursor: context-menu;
+  }
+  
+  .text p{
+    letter-spacing: 3px;
+    word-spacing: 10px;
+    padding-top: 20px;
+    font-size: 4rem;
+    font-weight: 1000;
+  
+  }
+  
+  .text a{
+    padding: 12px;
+    border: 3px solid lightgreen;
+    color: lightgreen;
+    font-size: 6rem;
+    letter-spacing: 2px;
+    position: relative;
+    top: 250px;
+    overflow: hidden;
+    transition: 0.5s;
+    display: inline-block;
+  }
+  
+  .text a:hover{
+    color: #fff
+  }
+  
+  .text a:before{
+    content: "";
+    background-color: lightgreen;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 0%;
+    z-index: -1;
+    transition: 0.5s;
+  }
+  
+  .text a:hover::before{
+    height: 100%;
+  }
+
+  .crowdfundallh2{
+    font-size: 6em;
+    margin: 5px;
+  }
+
+  .flexarticle{
+    padding: 5px;
+  }
+}
+.flexarticle{
+  padding: 5px;
+}
+
+@media screen and (max-width: 750px){
+
+  .text a{
+    padding: 12px;
+    border: 3px solid lightgreen;
+    color: lightgreen;
+    font-size: 2em;
+    letter-spacing: 2px;
+    position: relative;
+    top: 12px;
+    overflow: hidden;
+    transition: 0.5s;
+    display: inline-block;
+  }
+  
+  .text a:hover{
+    color: #fff;
+    background-color: lightgreen;
+  }
+  
+  .text a:before{
+    content: "";
+    background-color: lightgreen;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 0%;
+    z-index: -1;
+    transition: 0.5s;
+  }
+  .paddingparallax{
+    padding-top: 100px;
+  }
+
+  .crowdfundallh2{
+    font-size: 4em;
+  }
+
+  .aboutparallax1{
+    background: url(../img/nicolas-moscarda-eoJbO7P_1RY-unsplash.jpg) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 300px;
+    width: 100vw;
+  }
+
+  .aboutparallax2{
+    background: url(../img/aperture-vintage-SshYpuf607g-unsplash.jpg) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 300px;
+    width: 100vw;
+  }
+  .aboutparallax3{
+    background: url(../img/alexander-andrews-yOIT88xWkbg-unsplash.jpg) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 300px;
+    width: 100vw;
+}
+}
+
+#flexarticlemobile{
+  border-radius: 20%;
+  padding: 10px;
+}
+
+@media screen and (max-width: 376px){
+  .paddingparallax{
+    padding-top: 70px;
+  }
+
+  #flexarticlemobile{
+    border-radius: 20%;
+  }
+
+  .aboutparallax1{
+    background: url(../img/nicolas-moscarda-eoJbO7P_1RY-unsplash.jpg) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 200px;
+    width: 100vw;
+  }
+
+  .aboutparallax2{
+    background: url(../img/aperture-vintage-SshYpuf607g-unsplash.jpg) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 200px;
+    width: 100vw;
+  }
+  .aboutparallax3{
+    background: url(../img/alexander-andrews-yOIT88xWkbg-unsplash.jpg) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 200px;
+    width: 100vw;
+}
+}
+
+.gallery-section{
+  width: 100%;
+  padding: 60px 0;
+}
+
+.inner-width{
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+
+.border{
+  width: 180px;
+  height: 4px;
+  background: #333;
+  margin: 60px auto;
+}
+
+.gallery-section .gallery{
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+}
+
+.gallery-section .image{
+  flex: 25%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.gallery-section .image img{
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+}
+
+.gallery-section .image:hover img{
+  transform: scale(1.4);
+}
+
+.gallery-section h1{
+  text-align: center;
+  text-transform: upper-case;
+}
+
+@media screen and (max-width: 960px) {
+  .gallery-section .image{
+    flex: 100%;
+  }
+}
+
+
+
+
 
 
 
@@ -245,5 +1117,9 @@ header.sticky{
     visibility: hidden;
     height: 0;
     width: 0;
+}
+.text a:hover{
+  color: #fff;
+  background-color: lightgreen;
 }
 }

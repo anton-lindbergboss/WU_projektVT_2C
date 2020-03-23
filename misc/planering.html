@@ -205,7 +205,7 @@
 
     De andra problemen hade jag dock otur med.
     Jag lyckades inte lösa några andra problem, och desto mer tiden gick såg min hemsida allt sämre och sämre ut.
-    Och antingen på grund av trötthet, irritation, eller för att hålla min planeringsplan, googlade jag på "navbar bottom" och kopierade in den koden som en placeholder, för att sedan skriva en egen variant utifrån mina specifikationer.
+    Och på grund av trötthet, irritation, och för att hålla min planeringsplan, googlade jag på "navbar bottom" och kopierade in den koden som en placeholder, för att sedan skriva en egen variant utifrån mina specifikationer.
     Något jag tänkte att jag kunde hinna, men tyvärr tog lektionen slut.
 
     <h3>Lektion vecka 8</h3>
@@ -220,21 +220,116 @@
 
 
     <h3>Lektion vecka 10</h3>
+    Fortsatte att arbeta på nav-baren, nu för att göra den responsiv till fönstrets bredd. Började också fundera på innehållet på min hemsida, då om det endast finns bilder kan det bli lite väl tomt.
     <!-- Fyll på med dokumentation här. -->
 
     <h3>Lektion vecka 11</h3>
+    Jag skriver detta i efterhand, men vad jag kommer ihåg så stötte jag på en stor mängd problem med att göra nav-baren responsiv. På grund av att jag inte hittar vad felet är, kommer jag att helt byta ut min undre navbar. Fortsatte att arbeta hemma med detta hemma.
     <!-- Fyll på med dokumentation här. -->
 
     <h3>Lektion vecka 12</h3>
+    Har nu äntligen (även om det kanske är något sent) fått klart min nav-bar. Den är nu responsiv med hjälp av en hamburgermeny som kommer fram när fönstret blir för litet för en headline-navbar.
+    Ett "problem" som dock uppstått är att mina javascript:er inte alltid fungerar i javascript.js filen. Detta beror inte på hur något är länkat,
+    utan problemet ligger någon annanstans. Istället har jag valt att lägga dessa javascript i html med hjälp av <script></script>-taggen. Detta, för att jag har lyckats få lite javascript i javascript.js filen (hamburgermeny:n), och
+    javascript är inte det viktigaste när det kommer till detta arbetet. Jag stötte också på ett problem att ifall hemsidan är för bredd och display är satt på flex blir inte mina navbarer sticky längre. Detta åtgärdades genom att använda grid istället för flex, eller att göra objektet mindre
+    ifall grid av någon anledning inte kunde användas.
+
+    Fortsättningen under skedde inte under lektionen, men har att göra med tankar kring hemsidan som jag kommer ta upp i utvärderingen:
+    *Olika storlekar på samma typer av taggar, t.ex <p></p>-taggen, som går från att vara väldigt liten i vissa delar av hemsidan till att vara nästan lika stor som vissa h-taggar i andra.
+    *Minimal användning av olika färger, då nästintill allt är svart eller vitt om det inte är bilder eller knappar.
+    *Inte mycket grid-användning, då den endast används på första sidan (index.html).
+    *En nav-bar som dyker på längst ned på hemsidan på mobiler (när width är mindre eller lika med 375/376.)
+    *Icke Organiserat style.css-dokument, då beskrivningarna (namnet) på classer och id:s inte alltid är så tydliga, och vissa olika funktioner och design-val som görs med id:s skulle säkerligen kunna göras med class:inledningar, och göra hemsidan mer
+    *Lite för många <div></div>-taggar, då många av dessa taggar säkerligen skulle kunna ligga i argument / section taggar.
+    *Bold navbar när CROWDFUND eller HOME du är inne på (index) delsidorna. 
+    *Väldigt få bilder injobbade med texterna.
     <!-- Fyll på med dokumentation här. -->
 
     <h2>4. Testning</h2>
     <!-- Testa i Chrome + Firefox eller Safari (på både dator och mobil). Skiljer sig resultatet? Har du behövt anpassa ditt kod/innehåll efter de olika webbläsarna? Hur gick valideringen? Vad säger contrastchecker.com om text/bakgrundsfärg? Hur ser resultatet ut på en riktig telefon? -->
+    Mellan chrome och firefox finns det inga skillnader vad jag kan se.
+    På en riktig telefon skiljer sig dock resultatet, då jag med hjälp av @media screens gjort hemsidan väldigt responsiv. 
+    Förutom att en extra nav-bar dyker upp blir också all text något mindre, och resternade bilder och objekt förflyttas och anpassas 
+    för att vara så användarvänlig som möjligt. Vissa funktioner kan hittas på datorn, men endast om man har minskat hemsidans bredd 
+    (chrome / firefox-fönstret är mindre än 750px).
+    Contrastchecker gillar den mesta av mina bakgrundsfärger, något jag förväntade mig då jag till 90% använder #000 och #fff som färger. 
+    Den är lite mer emot när jag använder lite andra bakgrundsfärger / bilder, men eftersom detta används så sparsamt sticker de ut 
+    tillräckligt från resten av hemsidan för att fortfarande synas.
 
     <h2>5. Utvärdering</h2>
     <!-- Ex: Vad gick bra/mindre bra? (i arbetet/din förmåga).
     Nyanserat: "hur hade det blivit om jag istället hade...?"
     Konkreta förbättringsförslag i produkt + process. -->
+    Jag tycker att arbetet gick bra, men det kunde ha gått helt åt pipan. 
+    Anledningen till detta var för att jag jag gjorde valet att arbeta på
+    min nav-bar tills den var helt klar, och därefter fylla ut hemsidan med matrial. Detta var nog lite klantigt, för även om det gjordes 
+    för att hindra problemet att jag i slutet stod utan fungerande navbar, gjorde detta att jag istället fick alldeles för lite tid att spendera
+    på resten av arbetet, då jag istället spenderade tiden att finslipa nav-baren, då jag gått igenom och jobbat på ett flertal nu och slutligen 
+    hamnat på en jag gillar väldigt mycket. Problemen slutade heller inte när jag var klar med nav-baren, utan fortsatte därefter. Då eftersom 
+    nav-baren var så bearbetad var det mycket som kunde gå fel med den, vilket ledde till att flera saker har behövt åtgärdas och ibland tas bort 
+    helt då de helt enklet "clashat" samman med nav-baren. Vad man hade kunnat göra istället för detta hade varit att få till en enkel men fungerbar
+    nav-bar så att man har en, och sedan om tid finns kvar i slutet spendera tid på att kanske få till en mer intressant. För även om nav-baren 
+    är en stor del av en hemsida är det långt ifrån vad som ska ta mest tid (jämfört med tiden som ska spenderas på en delsida). Det hade också 
+    underlättat för andra idéer, då chansen att en enkel nav-bar med få funktioner krånglar är mycket mindre än att en med flera funktioner gör det.
+    
+    En annan sak jag vill skriva om är användningen av färger. Jag valde ungefär i mitten av processen att jag ville ha en väldigt clean hemsida, 
+    med väldigt lite färger och former. Detta för att få mer kontrast och slagstyrka när färger faktiskt används, och för att med alla bilder som 
+    kommer användas kommer det säkerligen finnas mer än nog färger. Jag tycker att detta var ett bra val, då jag inte (tror)
+    att min hemsida är på en nivå att jag skulle behöva visa hur man ändrar färg på någonting, och ifall det finns så gör jag redan detta, 
+    men då ändras färgen (oftast) mellan vit och svart (svartgrå ibland).
+    
+    En sak som jag tror hade förenklat arbetet hade varit att använda ett grid-system på mera av delsidorna. På grund av en tidsbrist han jag 
+    inte detta, men flera av problem jag stötte på med att saker och ting inte hamnade i den ordning jag skulle vilja eller inte befanns sig vart 
+    jag ville att det skulle befinna sig skulle säkerligen kunna ha åtgärdas av att använda grid-system.
+    Flexboxar används, och skulle använts i större utsträckning ifall min nav-bar inte krånglade med dem ibland. 
+    En bugg (så vitt jag vet) gör att vissa flexboxar påverkade så att navbaren inte fästes högst upp utan låstes och efter tillräcklig 
+    scrollning försvann. Detta skedde också med mindre undre navbar (syns endast på mobilen) som då försvann åt andra hållet (man behövde 
+    vara längst ned på hemsidan för att se den).
+
+    Något jag också är lite kluven kring är att storleken av samma olika taggar skiljer sig från delsida till delsida. Detta hade lätt kunnat åtgärdas (lägg bara in en och samma klass för de olika taggarna (eller använd rent av grundtaggen i css)), men jag tycker att de olika storlekarna väger upp hemsidans
+    "själ" något, då jag använder så lite färger och former kände jag att detta skulle vara ett stilrent och finurligt sätt att väga upp för det jag tappade genom att skippa färger och former. Dock vet jag inte riktigt hur jag känner kring detta nu i efterhand, då även om jag inte tycker att det stör hemsidan har jag fått lite klagomål från folk jag visat hemsidan
+    att de distraherar något (troligen då man inte är van vid att se det). Hade jag inte gjort på detta sättet hade jag istället behövt använda mer färger och former dock, vilket jag känner hade blivit lite mycket (då det redan finns så mycket färg med bilderna), vilket jag inte riktigt heller skulle vara så glad över. Till nästa gång
+    tror jag att jag ska använda lika lite färger, och ha mer etablerade storlekar på texter av samma tag. För att väga upp för detta kommer jag nog att försöka ha texten på speciella sätt (t.ex att den är skriven från höger till vänster, finns i olika boxar med olika bakgrundsfärger, outlinings, animationer osv).
+
+    Något jag är lite stolt över är min användning av en extra nav-bar på mobiler. Denna navbar används lite som simulation för mobilappar, 
+    då de absolut flesta mobilappar använder sig av en navbar längst ned på hemsidan, tillskillnad från PC standarden att ha den högst upp. 
+    Detta görs för att användaren ska känna igen sig något, och inte dras ifrån användningen för att det skiljer sig till vad hen är van vid.
+    Något jag inte är lika stolt över är bristen på organisering i css-filen. På grund av problemen med att den något komplexa nav-baren ställde 
+    till det för olika objekt har jag behövt gå tillbaka till css-dokumentet och fixa olika och samma saker fram och tillbaka, vilket jag är säker
+    på har lett till att flera onödiga klasser och id:s finns i antingen css eller html-filerna. Ett särskilt problem som också kom fram var att
+    vissa problem inte "visade" sig genom att bara kunna kolla på hemsidan, då problemet inte bara behöver ligga i utseendet, utan kan ligga i 
+    andra saker såsom att du kan scrolla för långt åt sidorna (något som varit ett stort problem för mig). Detta hoppas jag dock kunna åtgärda 
+    till nästa arbete, genom att faktiskt använda sidan lite efter att jag blivit "klar" med nästa hela element. Jag har också en hel del 
+    onödiga @media screen-taggar, när jag egentligen bara skulle behöva 3st (en för det hela fönstret (dator), en för lite mindre fönster 
+    (dator), och en för mobil). Min plan var att åtgärda detta i och med arbetet blev klart, men på grund av tidsbristen som skapades på 
+    grund av navbarerna har detta tyvärr inte gått. Vad som istället hade varit bättre hade varit att jag hade arbetat organiserat från början, 
+    då även om det känns snabbare att arbeta oorganiserat (då man får mer gjort på mindre tid), hade man troligen sparat ännu mer tid genom att 
+    vara organiserad från början, då det inte bara blir enklare för läraren att förstå ditt arbete,utan också enklare för dig själv, och sparar 
+    dig den tid du annars hade använt till att gå tillbaka och leta bland en röra av classer- och id-taggar.
+    Något denna oorganisationen också var till svar för är ett överbliv med <div></div>-taggar. Detta är inte något direkt problem i koden, 
+    då allting fungerar som det ska, men det finns säkerligen flera olika div-taggar som skulle kunna vara section och article taggar.
+    
+    Något jag också tänkte på när jag kom och kollade på min hemsida igen var att det var väldigt lite bilder inblandade med texterna, iallafall 
+    jämfört med andra elevers hemsidor. När jag jobbade med arbetet hade jag lite små tankar om att ha bilder och text samverkande, men slog snabbt
+    undan denna tanke då jag kände att jag skulle ha mer än nog med bilder utan att jobba in dem bland texten. Nu i efterhand ångrar jag mig dock 
+    något att jag inte gjorde detta, då jag genom att se andras arbeten blivit inspirerad till att ha med bilder och text. Om jag hade gjort detta
+    hade jag troligen fått en mer fylld hemsida, och även om jag tycker att den ser bra ut (då det var lite av ett minimalist tema jag gick för) 
+    finns det flera platser (t.ex vid avhuggningen ("centrerad right"-texten) i ABOUT-delsidan) där en bild eller två inte hade skadad, 
+    utan mycket troligare hjälp hemsidan.
+
+    Till sist vill jag avsluta med hur ett problem jag fick istället blev en funktion. När jag arbetade med ABOUT-delen av hemsidan 
+    (kan ha varit någon annan del, är inte helt säker faktiskt) märkte jag efter ett tag att när man gick in på CROWDFUND och index-delarna av 
+    hemsidan blev all text i navbarerna bold, vilket tanken inte var att den skulle bli. Jag hade inte riktigt någon aning om vad detta orsakades
+    av, men innan jag hann gå in för att leta på i css-filen fick jag en tanke att ha bold på navbaren på CROWDFUND och index kanske skulle vara 
+    något bra. Då dessa är de sidor som fokus ligger på (då den ena är den första hemsidan du besöker när du kommer in på hemsidan, medan den andra
+    är den viktigaste delen av hemsidan, något jag försökt visa genom att detta är den enda platsen när text i färg (som inte är svart eller vit) 
+    används.)
+
+    Det jag vill säga med detta är att jag till nästa projekt inte ska vara allt för rädd att något går fel, något jag kan tycka att jag varit här, 
+    då jag snabbt valt att ta bort vissa funktioner när de krånglar, då man känner att ens arbete på något sätt "går förlorat". Istället för att 
+    göra detta, kan man se på felen som tid att verkligen tänka över sin hemsida, och få andra (även om de kanske inte alltid är bra) idéer 
+    kring hur design:en av ens hemsida ska se ut.
+
 
 </body>
 </html>
