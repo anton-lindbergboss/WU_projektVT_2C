@@ -176,10 +176,9 @@ header ul li a{
   text-decoration: none;
   color: #000;
   letter-spacing: 2px;
-  font-weight: 500px;
   transition: 0.5s;
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 850px) {
 header .navunorderedtop .navlisttop .navatop{
     visibility: hidden;
     font-size: 0px;
@@ -257,11 +256,28 @@ header.sticky{
   color: black;
   overflow: hidden;
 }
+@media screen and (max-width: 380px) {
+  #Grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    grid-template-areas: 
+    "b1 b1 b1 b1 b1"
+    "b1 b1 b1 b1 b1"
+    "s1 s1 s1 s1 s1"
+    "s2 s2 s2 s2 s2"
+    "s3 s3 s3 s3 s3";
+  }
+}
+
+#bold{
+  font-weight: bold;
+}
 
 #Grid{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 20% 20% 20% 20% 20%;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   grid-template-areas: 
   "b1 b1 b1 b1 b1"
   "b1 b1 b1 b1 b1"
@@ -479,13 +495,30 @@ padding: 10px;
   font-size: 128px;
   margin: 20px;
   text-align: center;
+  
+}  
+#headerrubrikgreen{
+  font-size: 105px;
+  margin: 20px;
+  text-align: center;
+}
+#headerrubrik1{
+  font-size: 128px;
+  margin: 20px;
+  text-align: center;
+}
+#headerrubrik2{
+  font-size: 128px;
+  margin: 20px;
+  text-align: center;
+}
 }
 
 .flexarticle{
   font-size: 1.2em;
 }
 
-}
+
 
 .parallaximage2{
   height: 100%;
@@ -499,17 +532,45 @@ padding: 10px;
   grid-area: t1;
 }
 
-
-@media (max-width: 750px){
+@media (max-width: 376px){
   #headerrubrik{
-    font-size: 80px;
+    font-size: 50px;
+    margin: 20px;
+    text-align: center;
+  }
+  #headerrubrikgreen{
+    font-size: 50px;
+    margin: 20px;
+    text-align: center;
+  }
+  #headerrubrik1{
+    font-size: 50px;
+    margin: 20px;
+    text-align: center;
+  }
+  #headerrubrik2{
+    font-size: 50px;
     margin: 20px;
     text-align: center;
   }
 }
-
-@media (max-width: 376px){
+@media (max-width: 750px){
   #headerrubrik{
+    font-size: 50px;
+    margin: 20px;
+    text-align: center;
+  }
+  #headerrubrikgreen{
+    font-size: 50px;
+    margin: 20px;
+    text-align: center;
+  }
+  #headerrubrik1{
+    font-size: 50px;
+    margin: 20px;
+    text-align: center;
+  }
+  #headerrubrik2{
     font-size: 50px;
     margin: 20px;
     text-align: center;
@@ -676,7 +737,8 @@ padding: 10px;
 }
 
 .crowdfundh2first{
-  color: lightgreen
+  color: lightgreen;
+  font-size: 2em;
 }
 
 .padding5px{
@@ -892,7 +954,6 @@ padding: 10px;
     word-spacing: 10px;
     padding-top: 20px;
     font-size: 4rem;
-    font-weight: 1000;
   
   }
   
@@ -1087,7 +1148,6 @@ padding: 10px;
 
 .gallery-section h1{
   text-align: center;
-  text-transform: upper-case;
 }
 
 @media screen and (max-width: 960px) {
@@ -1112,7 +1172,7 @@ padding: 10px;
 
 
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 850px) {
   .hamburger{
     visibility: hidden;
     height: 0;
@@ -1123,3 +1183,82 @@ padding: 10px;
   background-color: lightgreen;
 }
 }
+
+/*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */
+ .hamburger {
+  padding: 15px 15px;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible; }
+  .hamburger:hover {
+    opacity: 0.7; }
+  .hamburger.is-active:hover {
+    opacity: 0.7; }
+  .hamburger.is-active .hamburger-inner,
+  .hamburger.is-active .hamburger-inner::before,
+  .hamburger.is-active .hamburger-inner::after {
+    background-color: #000; }
+
+.hamburger-box {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative; }
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px; }
+  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 40px;
+    height: 4px;
+    background-color: #000;
+    border-radius: 4px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease; }
+  .hamburger-inner::before, .hamburger-inner::after {
+    content: "";
+    display: block; }
+  .hamburger-inner::before {
+    top: -10px; }
+  .hamburger-inner::after {
+    bottom: -10px; }
+
+.hamburger--slider .hamburger-inner {
+  top: 2px; }
+  .hamburger--slider .hamburger-inner::before {
+    top: 10px;
+    transition-property: transform, opacity;
+    transition-timing-function: ease;
+    transition-duration: 0.15s; }
+  .hamburger--slider .hamburger-inner::after {
+    top: 20px; }
+
+.hamburger--slider.is-active .hamburger-inner {
+  transform: translate3d(0, 10px, 0) rotate(45deg); }
+  .hamburger--slider.is-active .hamburger-inner::before {
+    transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0);
+    opacity: 0; }
+  .hamburger--slider.is-active .hamburger-inner::after {
+    transform: translate3d(0, -20px, 0) rotate(-90deg); }
+
+.planering{
+height: 400px;
+  }

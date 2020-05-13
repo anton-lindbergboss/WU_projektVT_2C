@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dokumentation projekt Vt</title>
+    <link rel="stylesheet" href="css/style.css">
 
     <style>
         table, td, th {
@@ -38,7 +39,9 @@
 
     <h3>2.1 Handskiss</h3>
     <!-- Här lägger du en bild på din handskiss av layouten. Viktigt att du beskriver vilka boxelement som ska användas. Visa även hur du tänker med ditt grid (Hur många kolumner?) -->
-
+    <img src="../img/IMG-59.jpg" alt="Bild på skiss, första">
+    <img src="../img/IMG-60.jpg" alt="Bild på skiss, andra">
+    <img src="../img/IMG-61.jpg" alt="Bild på skiss, tredje">
     <h3>2.2 Schema</h3>
     <!-- Vad ska du göra när? Inte för detaljerat. -->
 
@@ -195,24 +198,15 @@
     Fortsatte på nav-baren, och ramblade in i en mängd olika problem. Först och främst var jag osäker
     om jag skulle vilja börja med att anpassa sidan till mobil eller dator först, då den kommer se annorlunda ut beroende på.
     Till att börja med ville jag anpassa för dator, men ändrade detta när vi började idag eftersom sidan skall vara mobile first.
-    Men med detta bestämt var jag tvungen att ändra nav-baren en del. Symboler och liknande har jag inte fixat till än, så de är fortfarande i textform, 
-    men jag var tvugnen att anpassa både formen på boxarna (så att de inte var för stora för nav-baren, men fortfarande hade plats för en bild), fixa texten i boxarna (så att de var centrerade)
-    och flytta ner nav-baren. 
+    Men med detta bestämt var jag tvungen att ändra nav-baren en del. Symboler och liknande har jag inte fixat till än, så de är fortfarande i textform, men jag var tvugnen att anpassa både formen på boxarna (så att de inte var för stora för nav-baren, men fortfarande hade plats för en bild), fixa texten i boxarna (så att de var centrerade) och flytta ner nav-baren. 
 
-    Innan detta var jag också tvugnen att fixa till så att det klickbara i boxarna inte var större en själva navbar:en.
-    Nu var jag i hettans moment en aning oklok, och tog bort all min förra kod utan att spara vart problemet låg, men jag lyckades slutligen lösa detta problem genom att ändra min listas-item-height till ett pixelformat, istället för ett procentformat.
-    Oturligt nog lyckades jag inte lista ut varför detta löste problemet.
+    Innan detta var jag också tvugnen att fixa till så att det klickbara i boxarna inte var större en själva navbar:en. Detta gjordes genom att anpassa storleken på texten / logotyperna i css.Nu var jag i hettans moment en aning oklok, och tog bort all min förra kod utan att spara vart problemet låg, men jag lyckades slutligen lösa detta problem genom att ändra min listas item-height till ett pixelformat, istället för ett procentformat, eftersom procentformatet var ogiltigt.
 
-    De andra problemen hade jag dock otur med.
-    Jag lyckades inte lösa några andra problem, och desto mer tiden gick såg min hemsida allt sämre och sämre ut.
-    Och på grund av trötthet, irritation, och för att hålla min planeringsplan, googlade jag på "navbar bottom" och kopierade in den koden som en placeholder, för att sedan skriva en egen variant utifrån mina specifikationer.
-    Något jag tänkte att jag kunde hinna, men tyvärr tog lektionen slut.
+    De andra problemen hade jag dock otur med. Jag lyckades inte lösa några andra problem, och desto mer tiden gick såg min hemsida allt sämre och sämre ut. Och på grund av trötthet, irritation, och för att hålla min planeringsplan, googlade jag på "navbar bottom" och kopierade in den koden som en placeholder, för att sedan skriva en egen variant utifrån mina specifikationer. Något jag tänkte att jag kunde hinna, men tyvärr tog lektionen slut.
 
     <h3>Lektion vecka 8</h3>
     <!-- Fyll på med dokumentation här. -->
-    Under lektionen vecka 8 valde jag att reflektera över mitt min hemsida när det kom till dess olika indelningar, och kom fram till en mängd olika saker.
-    En av dessa sakerna var att jag skulle ha två olika nav:barer, en som är placerad längst ned som endast är synlig på mobilen, och en där uppe som
-    är synlig på både mobil och dator.
+    Under lektionen vecka 8 valde jag att reflektera över mitt min hemsida när det kom till dess olika indelningar, och kom fram till en mängd olika saker. En av dessa sakerna var att jag skulle ha två olika nav:barer, en som är placerad längst ned som endast är synlig på mobilen, och en där uppe som är synlig på både mobil och dator.
 
     <h3>Lektion vecka 9</h3>
     <!-- Fyll på med dokumentation här. -->
@@ -225,17 +219,23 @@
 
     <h3>Lektion vecka 11</h3>
     Jag skriver detta i efterhand, men vad jag kommer ihåg så stötte jag på en stor mängd problem med att göra nav-baren responsiv. På grund av att jag inte hittar vad felet är, kommer jag att helt byta ut min undre navbar. Fortsatte att arbeta hemma med detta hemma.
+    
+    Jag gjorde också klart min hamburger-meny, och använde mig av denna för hjälp och referens:
+    * Hamburgers
+    * @description Tasty CSS-animated hamburgers
+    * @author Jonathan Suh @jonsuh
+    * @site https://jonsuh.com/hamburgers
+    * @link https://github.com/jonsuh/hamburgers
     <!-- Fyll på med dokumentation här. -->
 
     <h3>Lektion vecka 12</h3>
-    Har nu äntligen (även om det kanske är något sent) fått klart min nav-bar. Den är nu responsiv med hjälp av en hamburgermeny som kommer fram när fönstret blir för litet för en headline-navbar.
-    Ett "problem" som dock uppstått är att mina javascript:er inte alltid fungerar i javascript.js filen. Detta beror inte på hur något är länkat,
-    utan problemet ligger någon annanstans. Istället har jag valt att lägga dessa javascript i html med hjälp av <script></script>-taggen. Detta, för att jag har lyckats få lite javascript i javascript.js filen (hamburgermeny:n), och
-    javascript är inte det viktigaste när det kommer till detta arbetet. Jag stötte också på ett problem att ifall hemsidan är för bredd och display är satt på flex blir inte mina navbarer sticky längre. Detta åtgärdades genom att använda grid istället för flex, eller att göra objektet mindre
-    ifall grid av någon anledning inte kunde användas.
+    Har nu äntligen (även om det kanske är något sent) fått klart min nav-bar. Den är nu responsiv med hjälp av en hamburgermeny som kommer fram när fönstret blir för litet för en headline-navbar. Ett "problem" som dock uppstått är att mina javascript:er inte alltid fungerar i javascript.js filen. Detta beror inte på hur något är länkat, utan problemet ligger någon annanstans. Istället har jag valt att lägga dessa javascript i html med hjälp av script-taggen. Detta, för att jag har lyckats få lite javascript i javascript.js filen (hamburgermeny:n), och javascript är inte det viktigaste när det kommer till detta arbetet. Jag stötte också på ett problem att ifall hemsidan är för bredd och display är satt på flex blir inte mina navbarer sticky längre. Detta åtgärdades genom att använda grid istället för flex, eller att göra objektet mindre ifall grid av någon anledning inte kunde användas.
+
+    OBS: Javascript problemet är nu löst. Varför det inte fungerade förut är något oklart, men det hade troligen att göra med att jag inte hade länkat js-filen rätt, eller att sidan (eller webbläsaren) hade problem med att js-filen uppdaterades.
 
     Fortsättningen under skedde inte under lektionen, men har att göra med tankar kring hemsidan som jag kommer ta upp i utvärderingen:
-    *Olika storlekar på samma typer av taggar, t.ex <p></p>-taggen, som går från att vara väldigt liten i vissa delar av hemsidan till att vara nästan lika stor som vissa h-taggar i andra.
+    *Olika storlekar på samma typer av taggar, t.ex p-taggen, som går från att vara väldigt liten i vissa delar av hemsidan till att vara nästan lika stor som vissa h-taggar i andra.
+    
     *Minimal användning av olika färger, då nästintill allt är svart eller vitt om det inte är bilder eller knappar.
     *Inte mycket grid-användning, då den endast används på första sidan (index.html).
     *En nav-bar som dyker på längst ned på hemsidan på mobiler (när width är mindre eller lika med 375/376.)
@@ -253,9 +253,32 @@
     för att vara så användarvänlig som möjligt. Vissa funktioner kan hittas på datorn, men endast om man har minskat hemsidans bredd 
     (chrome / firefox-fönstret är mindre än 750px).
     Contrastchecker gillar den mesta av mina bakgrundsfärger, något jag förväntade mig då jag till 90% använder #000 och #fff som färger. 
+    Bildbevis:
+    <img src="../img/valid_color1.png" alt="Bild på validering">
+    <img src="../img/valid_color2.png" alt="Bild på validering">
     Den är lite mer emot när jag använder lite andra bakgrundsfärger / bilder, men eftersom detta används så sparsamt sticker de ut 
     tillräckligt från resten av hemsidan för att fortfarande synas.
+    Därefter testade jag i Internet Explorer, där allt fungerade perfekt och på samma sätt som i Google Chrome. 
+    Bilderna visades, funktionerna fungerade och texten var densamma som i Chrome.
 
+    Jag använde mig också av flera olika valideringstjänster för att validera min html och css kod. Först validerades CSS, varav 3st värdefel varav två var av font-weight och den tredje text-transform rättades till.
+    Den rättade till att man inte kunde ha font weight 1000 eller 500px, eller text-transform: upper-case. Detta rättades enkelt till, och är nu borta från min css kod.
+
+    bild på CSS-valideringen:
+    <img src="../img/valid_css.png" alt="Bild på en valdering från ">
+
+    Jag kollade därefter igenom mina HTML-koder. Jag började med min about.html, då den helt enkelt var överest. Jag trodde innan att jag inte skulle få några fel då koden enligt mig fungerade, men så var inte fallet. 
+    Istället visade det sig att det finns några regler jag inte visste om att man skulle följa, iallafall enligt detta valideringsverktyget (W3). Saker såsom att ha två olika classer på en och samma sak, ha samma ID på olika saker, 
+    och att inte ha ett mellanrum mellan attributes är några av dem viktigaste sakerna som dök upp. Dessa fel rättades till efter valideringen. Jag kollade därefter art.html, contact.html, covers.html, index.html, purchase.html, templates.html
+    och i princip samma fel kom upp. Dessa fel rättades till efter valideringen.
+    Bild på HTML-valideringen (I alfabetisk ordning (about.html, art.html, contact.html, covers.html, index.html, purchase.html och templates.html).):
+    <img src="../img/valid_about.png" alt="bild på valdering av html">
+    <img src="../img/valid_art.png" alt="bild på valdering av html">
+    <img src="../img/valid_contact.png" alt="bild på valdering av html">
+    <img src="../img/valid_covers.png" alt="bild på valdering av html">
+    <img src="../img/valid_index.png" alt="bild på valdering av html">
+    <img src="../img/valid_purchase.png" alt="bild på valdering av html">
+    <img src="../img/valid_templates.png" alt="bild på valdering av html">
     <h2>5. Utvärdering</h2>
     <!-- Ex: Vad gick bra/mindre bra? (i arbetet/din förmåga).
     Nyanserat: "hur hade det blivit om jag istället hade...?"
@@ -306,7 +329,7 @@
     då även om det känns snabbare att arbeta oorganiserat (då man får mer gjort på mindre tid), hade man troligen sparat ännu mer tid genom att 
     vara organiserad från början, då det inte bara blir enklare för läraren att förstå ditt arbete,utan också enklare för dig själv, och sparar 
     dig den tid du annars hade använt till att gå tillbaka och leta bland en röra av classer- och id-taggar.
-    Något denna oorganisationen också var till svar för är ett överbliv med <div></div>-taggar. Detta är inte något direkt problem i koden, 
+    Något denna oorganisationen också var till svar för är ett överbliv med div-taggar. Detta är inte något direkt problem i koden, 
     då allting fungerar som det ska, men det finns säkerligen flera olika div-taggar som skulle kunna vara section och article taggar.
     
     Något jag också tänkte på när jag kom och kollade på min hemsida igen var att det var väldigt lite bilder inblandade med texterna, iallafall 
